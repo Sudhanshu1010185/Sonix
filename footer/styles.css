@@ -1,0 +1,159 @@
+
+.footer {
+    width: 100%;
+    min-height: 50vh;/* Fixed height */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.501) 0%, rgba(0, 0, 0, 0.127) 100%), 
+                radial-gradient(at top center, rgba(255, 255, 255, 0.626) 0%, rgba(0,0,0,0.40) 120%) #d6d6d6;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start; /* Keep content to the left */
+    align-items: stretch;
+    max-width: 1200px;
+}
+
+/* Logo Styling */
+.logo {
+    flex: 0 0 300px; /* Fixed width for the logo container */
+    display: flex;
+    align-items: center; /* Center the image vertically */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    object-fit: cover;
+}
+
+/* Footer Columns */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 ;
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* Footer Column Headings */
+.footer-column h2 {
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+/* List Items */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Hover Effect */
+.footer-column li::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(78, 78, 78);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.footer-column li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    text-align: center;
+    color: #cccccc;
+    background: linear-gradient(to right, #202020, #191919, #2e2e2e);
+    padding: 5px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.footer-bottom span a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-bottom span {
+    display: block;
+    padding-top: 10px;
+}
+
+.footer-bottom span a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.footer-column .social-icons i {
+    margin-right: 10px;
+}
+
+.footer-column .social-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 900px) {
+    .footer {
+        flex-direction: column;
+        height: auto; /* Adapt height to content */
+    }
+
+    .footer-content {
+        flex-direction: row; /* Stack image and columns */
+        align-items: flex-start; /* Center content on small screens */
+    }
+
+    .logo {
+        padding: 0;
+        margin: 0;/* Adjust image width */
+        justify-content: center ;
+        align-items: center;
+        display: flex;
+        }
+    .logo img{
+        width: 300px;
+        height: 50px;
+    }
+    .footer-column {
+        padding: 20px 0;
+    }
+}
+@media (max-width: 650px)  {
+    .footer {
+        flex-direction: column;
+        height: auto; /* Adapt height to content */
+    }
+    .footer-content {
+        flex-direction: column; /* Stack image and columns */
+        align-items: flex-start; /* Center content on small screens */
+    }
+}
+

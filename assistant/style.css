@@ -1,0 +1,131 @@
+.bgcontainer {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-container {
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+    margin-bottom: 30px;
+    background: rgb(255,255,255);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 23%, rgba(255,255,255,1) 28%, rgba(255,255,255,1) 38%, rgba(149,149,149,1) 100%);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 12px 12px 25px #000000d9;
+    opacity: 0;
+    transform: translateX(60%);
+    transition: opacity 4s ease, transform 3s ease;
+}
+.bgcontainer.reveal .product-container {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.bgcontainer.hide .product-container {
+    opacity: 0;
+    transform: translateX(-60%),
+}
+#pimg {
+    border-radius: 25px;
+    box-shadow: 12px 12px 25px #000000d9;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    left: -200px;
+    top: calc(50% - 250px); /* Center the image vertically */
+}
+
+.product-details {
+    position:absolute;
+    margin-left: 350px;
+    display: block;
+    flex-direction: column;
+    justify-content: right;
+    height: 100%;
+}
+
+.product-name {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.5em;
+}
+
+.price .strike {
+    text-decoration: line-through;
+    color: rgb(69, 69, 69);
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.discount {
+    font-size: 1.2em;
+    color: red;
+}
+
+.small-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.small-images img {
+    width: 50px;
+    height: 50px;
+    cursor: grabbing;
+    border-radius: 10px;
+}
+
+.small-images img:hover {
+    box-shadow: #000000ec 2px 2px 5px;
+    border-radius: 10px;
+}
+
+.key-points {
+    margin-top: 20px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(235, 139, 5);
+    color: white;
+    transition: background-color 0.3s;
+    box-shadow: #000000ec 5px 5px 10px;
+    border-radius: 5px;
+    justify-content: center;    
+    border-radius: 30px;
+}
+.buttons button i{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.buttons button:hover {
+    background-color: rgba(255, 166, 0, 0.845);
+    text-shadow: #fff 0 0 2px;
+}

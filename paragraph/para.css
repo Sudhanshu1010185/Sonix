@@ -1,0 +1,94 @@
+.container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    padding-bottom: 0px;
+    position: relative;
+    color: rgb(208, 208, 208);
+    text-shadow: 01px 1px 10px #000;
+    cursor: default;
+    background: linear-gradient(to left, #4a4a4a, #181818, #292929);
+}
+.container2 .fade-element {
+    opacity: 0;
+    transition: opacity 5s ease; /* Smooth fade transition */
+}
+.container2.reveal .fade-element {
+    opacity: 1;
+}
+.container2.hide .fade-element {
+    opacity: 0;
+}
+.section2 {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.section2 img {
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para {
+    padding-right: 20px;
+    margin-right: 20px;
+}
+/* Wave Container Styles */
+.wave2 {
+    position: relative;
+    width: 55%; /* Adjust width as needed */
+    height: 100px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+/* Adjust wave animation styles for horizontal wave effect */
+.wave-animation2 {
+    display: flex;
+    justify-content: space-between; /* Ensure bars are spaced horizontally */
+    align-items: center; /* Align bars vertically centered */
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+}
+/* Wave bar styles */
+.wave-bar2 {
+    width: 4px; /* Adjust width as needed */
+    background-color: rgb(92, 163, 234);
+    animation: waveMove2 2s infinite ease-in-out;
+}
+/* Alternate heights for the wave bars */
+.wave-bar2:nth-child(odd) { /* Odd-indexed bars are taller */
+    height: 80%;
+    animation-delay: 0s;
+}
+.wave-bar2:nth-child(even) { /* Even-indexed bars are shorter and vertically centered */
+    height: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/* Keyframes for wave effect */
+@keyframes waveMove2 {
+    0%, 100% { transform: scaleY(1); } /* Start and end state */
+    50% { transform: scaleY(0.7); } /* Middle of animation */
+}
+@media (max-width: 1000px) {
+    .container2 {
+        padding: 0px;
+    }
+    .wave2 {
+     display: none;
+    }  
+    .section2 img{
+        display: none;
+    }
+}

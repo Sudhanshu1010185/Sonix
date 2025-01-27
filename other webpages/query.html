@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100vh;
+            background: linear-gradient(45deg , #4a4a4a , #181818 , #292929);;
+            position: relative;
+        }
+
+        .chat-container {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chat-message {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 5px 0;
+        }
+
+        .system-message {
+            background-color: #474747;
+            align-self: flex-start;
+            color: aliceblue;
+            
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end;
+            word-wrap: break-word; /* Add this to break long words */
+    word-break: break-word; /* Add this to break long words */
+    overflow-wrap: break-word; /* Ensures the text wraps inside the container */
+        }
+
+        .options {
+            display: inline;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .option {
+            background: linear-gradient( 180deg ,#007bffcd, #6bb3ffd4 ) ;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .option:hover {
+            background:none ;
+            background-color: #0056b3;
+        }
+        #last{
+            margin-bottom: 40px;
+        }
+        .message-input-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #202020;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-input-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #5c5c5c;
+            border-radius: 5px;
+            background-color: #5c5c5c;
+            color: azure;
+            padding: 0px 5px;
+        }
+        .message-input-container input::placeholder {
+            color: #202020;
+        }
+        .message-input-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 25px;
+        }
+
+        .message-input-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Chat container for messages -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-message system-message">Hello , I am Assistant bot. Choose your query option or ask your any query we will connect to our Real time person assistant .</div>
+    </div>
+
+    <!-- Options Section (Now Above the Input Box) -->
+    <div class="options">
+        <button class="option" onclick="sendOption('Customer Care Number')">Customer Care Number</button>
+        <button class="option" onclick="sendOption('About Product or Delivery')">About Product or Delivery</button>
+        <button class="option" onclick="sendOption('About Subscription Plan')" id="last">About Subscription Plan</button>
+    </div>
+
+    <!-- Fixed Message Input at Bottom -->
+    <div class="message-input-container">
+        <input type="text" id="messageInput" placeholder="Write your query...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+       const chatContainer = document.getElementById('chatContainer');
+
+// Function to append user message and generate system response
+function sendOption(optionText) {
+    // Append user's message on the right
+    appendMessage(optionText, 'user-message');
+
+    // Generate system response based on option selected
+    let responseText = '';
+    switch (optionText) {
+        case 'Customer Care Number':
+            responseText = 'You can contact our customer care at: +800 770 8639';
+            break;
+        case 'About Product or Delivery':
+            responseText = 'Our products are delivered within 3-5 business days. You can track your order using the tracking ID sent to your email.';
+            break;
+        case 'About Subscription Plan':
+            responseText = 'Our subscription plans start at Rs399 per month in premium tier and Family tier is Rs 699 Where you can get more benifits with low price. Contact support for more details.';
+            break;
+        default:
+            responseText = 'Server is down please try again later :)';
+    }
+
+    // Append system response on the left
+    appendMessage(responseText, 'system-message');
+}
+
+// Function to send a message from the input field
+function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const messageText = messageInput.value.trim();
+
+    if (messageText !== '') {
+        appendMessage(messageText, 'user-message');
+        
+        // Respond with "I don't understand" to anything typed
+        appendMessage('Server is down ! please try again later :)', 'system-message');
+
+        messageInput.value = ''; // Clear the input field
+    }
+}
+
+// Function to append a message to the chat container
+function appendMessage(messageText, messageClass) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('chat-message', messageClass);
+    messageElement.textContent = messageText;
+
+    chatContainer.appendChild(messageElement);
+
+    // Scroll to the bottom to show the new message
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+// Add event listener for "Enter" key
+const messageInput = document.getElementById('messageInput');
+messageInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+    </script>
+
+</body>
+</html>

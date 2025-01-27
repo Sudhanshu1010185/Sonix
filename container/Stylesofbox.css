@@ -1,0 +1,185 @@
+
+        .container {
+            position: relative;
+            margin: 20px;
+            border-radius: 15px;
+            border: #62a1f478 1px solid;
+            padding: 10px;
+            overflow: hidden;
+            cursor:default;
+            background-size: cover;
+        }
+
+        .text {
+ 
+            font-size: 100px;
+            font-weight: 600;
+            background: linear-gradient(to right, #c8e5fe,#8cc0ff, #647eff, #647eff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+            padding: 5px;
+            text-shadow: 0 10px 15px #00000000;
+            margin-left: 30px;
+        }
+
+        #responsive-para {
+ 
+            font-size: 100px;
+            font-weight: 600;
+            background: linear-gradient(to right,#c8e5fe,#8cc0ff, );
+            margin-left: 35px; /* Space between "Feel" and the typing effect */
+        }
+
+        /* Styles for background shapes */
+        .circle, .square, .rectangle, .circle2 {
+            position: absolute;
+            background: linear-gradient(45deg, #1dc7ff, #3c6fe6 , #2454ffce);
+            pointer-events: none; /* Makes sure the shapes do not interfere with other elements */
+            z-index: -1; /* Ensures shapes stay behind other content */
+            box-shadow: 0 0 30px rgba(11, 122, 187, 0.73);
+            opacity: 0.5;
+        }
+
+        .circle {
+            border-radius: 50%;
+            top: 10%; 
+            left: 10%;
+            width: 300px;
+            height: 300px;
+        }
+
+        .circle2 {
+            border-radius: 50%;
+            top: 40%; 
+            left: 30%;
+            width: 90px;
+            height: 90px;
+        }
+
+        .rectangle {
+            top: 20%;
+            left: 60%;
+            width: 200px;
+            height: 140px;
+        }
+
+        .square {
+            top: 40%; 
+            left: 70%; 
+            width: 250px;
+            height: 250px;
+        }
+
+.platform {
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* Stack text and images vertically */
+    align-items: center; /* Center text and images horizontally */
+    font-size: 64px;
+    color: aliceblue;
+    margin-top: 35px;
+}
+
+.platform span {
+    margin-bottom: 20px; /* Adds space between the text and images */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.image-container {
+    display: flex;
+    gap: 20px; /* Space between the image containers */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column; /* Stack image and label vertically */
+    align-items: center; /* Center image and label horizontally */
+}
+
+.image-item img {
+    width: 150px;
+    height: auto;
+    transition: opacity .5s ease;
+}
+.image-item img:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+.image-item p {
+    margin-top: 10px; /* Remove default margin */
+    font-size: 20px; /* Adjust font size if needed */
+    color: #2c67f2;
+    text-align: center;
+}
+.image-item p:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    text-decoration: underline;
+}
+.image-container2 {
+    display: flex;
+    gap: 0px; /* Space between the image containers */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Font Size */
+.image-container2 span {
+    font-size: 4vw; /* Font size based on viewport width */
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: azure;
+}
+
+/* Responsive Image Size */
+.mimage img {
+    width: 15vw; /* Image width based on viewport width */
+    height: auto;
+    transition: transform 0.1s ease;
+}
+
+.mimage img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+@media (max-width: 800px) {
+    .text{
+        font-size: 75px;
+        display: block;
+    }
+    #responsive-para{
+        font-size: 65px;
+        margin-left: 0;
+    }
+}
+/* Adjustments for smaller screens (600px or below) */
+@media (max-width: 600px) {
+    #responsive-para{
+        font-size: 55px;
+        margin-left: 0;
+    }
+    .image-item img {
+        width: 100px;
+    }
+    .image-container2 span {
+        font-size: 6vw; /* Increase font size for smaller screens */
+    }
+
+    .mimage img {
+        width: 10vw; /* Increase image size for smaller screens */
+    }
+}
+
+/* Adjustments for larger screens (1200px and above) */
+@media (min-width: 1200px) {
+    .image-container2 span {
+        font-size: 3vw; /* Reduce font size for larger screens */
+    }
+
+    .mimage img {
+        width: 10vw; /* Reduce image size for larger screens */
+    }
+}
+

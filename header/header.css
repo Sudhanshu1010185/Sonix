@@ -1,0 +1,300 @@
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to left , #4a4a4a , #181818 , #292929);
+            background-size: cover;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #000, #171717 , #303030);
+            color: white;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        .menu-button {
+            display: none;
+        }
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hamburger-Side-menu {
+    display: none ;
+} 
+
+@media screen and (max-width: 850px) {
+    /* Hide navigation */
+    .header .nav {
+        display: none ;
+    }
+
+    /* Add button left side of logo */
+    .header .logo1 {
+        position: absolute;
+        margin-left: 35px;
+    }
+    .menu-button {
+        display: block;
+        margin-right: 20px;
+        padding: 0px;
+        color: white;
+        background: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px;
+        text-align: center;
+        transition: transform 0.5s, color 0.3s ease; /* For X animation */
+    }
+    
+    .menu-button.open {
+        transform: rotate(90deg); /* Rotate to create the X effect */
+    }
+    
+    /* hamburger side menu  */
+    .hamburger-Side-menu {
+        margin: 0;
+        padding-right: 0;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        background: rgb(31, 31, 31);
+        display: block; /* Change display to block so it's always available */
+        top: 60px;
+        left: 0;
+        z-index: 999;
+        transition: transform 0.6s ease; /* Smooth slide-in animation */
+        transform: translateY(-200%); /* Initially hidden off-screen (upward) */
+    }
+    
+    .hamburger-Side-menu.open {
+        transform: translateY(0); /* Slide in when open */
+    }
+    
+    .hamburger-Side-menu .nav {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+    }
+    
+    .hamburger-Side-menu .nav a {
+        margin: 0 10px;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .hamburger-Side-menu .nav a:hover {
+        color: #62cff4;
+    }
+    
+    .hamburger-Side-menu .nav-buttons {     
+        display: flex;
+        align-items: right;
+        margin-right: 50px;
+    }
+    
+    .hamburger-Side-menu .tools-button {
+        position: relative;
+        margin: 0 10px;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .hamburger-Side-menu .tools-button:hover {
+        color: #62d0f4c1;
+    }
+    
+    .hamburger-Side-menu .tools-dropdown {
+        position: absolute;
+        top: 35px;
+        right: -10px;
+        display: none;
+        flex-direction: column;
+        background: transparent;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .hamburger-Side-menu .tools-dropdown a {
+        padding: 10px 20px;
+        background: linear-gradient(to right, #1b1b1b, #2e2e2e , #1b1b1b);
+        color: white;
+        text-decoration: none;
+        transition: color 0.4s ease;
+    }
+    
+    .hamburger-Side-menu.tools-dropdown a:hover {
+        color: #62cff4;
+    }
+    
+    .hamburger-Side-menu .tools-button:hover .tools-dropdown {
+        display: flex;
+        animation: slideDown 0.5s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+
+    }
+ 
+        /* Hide/Show Toggle */
+    .hidden {
+            top: -60px; /* Adjust according to header height */
+    }
+    .nav-buttons #login {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: linear-gradient( to right , #17867d , #0ebeaf,#0af3e7 );
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: #000000aa 1px 7px 0;
+            transition: background-color 0.3s ease;
+    }
+
+        .nav-buttons #login:hover {
+            background: linear-gradient( to right , #17867dad , #0ebeafb8,#0af3e7a9 );
+            margin-top: 1px;
+            box-shadow: #000000aa 1px 10px 0;
+        }
+        .nav-buttons #premium {
+            margin: 0 10px;
+            padding: 5px 10px;
+            background: linear-gradient(to left, #97cdff , #3590e6 , #0d68bd );
+            color: rgb(0, 0, 0);
+            border: none;
+            font-size: large;
+            font-weight: bolder;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            height: 40px;
+            box-shadow: #000000aa 1px 7px 0;
+        }
+        .nav-buttons #premium:hover {
+            background: linear-gradient(to left, #97cdffbd , #3590e6d4 , #0d68bdc8 );
+            color: rgb(24, 24, 24);
+            box-shadow: #000000aa 1px 10px 0;
+            margin-top: 1px;
+        }
+        /* Buttons in Header */
+        .logo1 {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #62cff4;
+        }
+        .nav-buttons {     
+            display: flex;
+            align-items: right;
+            margin-right: 50px;
+        }
+        .tools-button {
+            position: relative;
+            margin: 0 10px;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .tools-button:hover {
+            color: #62d0f4c1;
+        }
+
+        .tools-dropdown {
+            position: absolute;
+            top: 35px;
+            right: -10px;
+            display: none;
+            flex-direction: column;
+            background: transparent ;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tools-dropdown a {
+            padding: 10px 20px;
+            background: linear-gradient( to right, #1b1b1b, #2e2e2e , #1b1b1b);
+            color: white;
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .tools-dropdown a:hover {
+            color: #62cff4;
+        }
+
+        .tools-button:hover .tools-dropdown {
+            display: flex;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+

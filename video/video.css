@@ -1,0 +1,134 @@
+        .videomotion {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .video-container {
+            position: relative;
+            width: 60%;
+            max-width: 700px;
+            margin-right: 20px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: #000000c5 12px 12px 24px;
+        }
+
+        /* Center Play/Pause Button */
+        .center-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            transition: transform 0.2s ease-in;
+        }
+        .center-btn:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+        }
+
+        /* Sound button (top-right corner) */
+        .sound-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.681);
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+        .sound-btn:hover {
+            background-color: rgba(0, 0, 0, 0.859);
+        }
+
+        /* Ensure Play/Pause button always visible when video ends */
+        .center-btn.always-visible {
+            opacity: 1;
+        }
+
+        /* Text on the right side of the video */
+        .videomotion p {
+            color: aliceblue;
+            font-size: 30px;
+            max-width: 35%;
+            margin-left: 20px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #playPauseBtn {
+            display: block; /* Ensure it is visible by default */
+            background: rgba(222, 0, 0, 0.953); /* Background color for visibility */
+            border: none;
+            color: rgba(231, 231, 231, 0.914);
+            cursor: pointer;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 24px;
+            transition: transform 0.2s ease-in;
+        }
+        
+        #playPauseBtn.hidden {
+            display: none; /* Hide the button when video is playing */
+        }
+        
+/* Define animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(70px); /* Reduced distance for smoother effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(70px); /* Reduced distance for smoother effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation class for video container */
+.video-container.animate {
+    animation: fadeInUp 3s ease-out;
+}
+
+/* Animation class for text */
+.p-text.animate {
+    animation: fadeInRight 3s ease-out;
+}
+
+@media (max-width:800px) {
+    .videomotion {
+        display:flex;
+        align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+        
+    .videomotion p{
+        max-width: 75%;
+    }
+}

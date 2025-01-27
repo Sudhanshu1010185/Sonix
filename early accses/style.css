@@ -1,0 +1,76 @@
+.playstore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    height: auto;
+    position: relative;
+    overflow: hidden; /* Ensure no content spills out */
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 3s ease, transform 3s ease;
+    margin-bottom: 20px;
+}
+.playstore.reveal {
+    opacity: 1;
+    transform: translateX(0);
+}
+.image {
+    width: 20%;
+    height: auto; /* Adjust width as needed */
+    transform: translateX(300%);
+    transition: transform 4s ease , transform .5s ease;
+    right: 10%;
+    box-shadow: #000000 22px 22px 25px ;
+    cursor: pointer;
+}
+.image:hover {
+    transform: translateX(300%) translateY(-10px);
+}
+.phrase {
+    width: 40%; /* Adjust width as needed */
+    text-align: left;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    color: #f0f0f0;
+}
+.phrase h2 {
+    margin: 0;
+    font-size: 50px;
+}
+.phrase button {
+    background-color: #003cff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform .3s ease-in , background-color 1s ease , phrase-shadow .5s ease-in;
+}
+.phrase button:hover {
+    background-color: #1f64db;
+    transform: scale(1.1);
+    text-shadow: #fff 0px 0px 3px;
+}
+@media (max-width:700px){
+    .playstore {
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-50%);
+    }
+        .image {
+            width: 40%;
+            height: auto;
+            transform: translateX(0%);
+        }
+        .image:hover {
+                transform: translateX(0%) translateY(-10px);
+            }
+            .phrase {
+                width: 40%; /* Adjust width as needed */
+                margin-top: 5%;
+                transform: translateX(0%);
+            }
+}
