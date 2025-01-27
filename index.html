@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonix</title>
+    <link rel="stylesheet" href="header/header.css">
+    <link rel="stylesheet" href="header/popup.css">
+    <link rel="stylesheet" href="banner/banner.css">
+    <link rel="stylesheet" href="container/Stylesofbox.css">
+    <link rel="stylesheet" href="assistant/style.css">
+    <link rel="stylesheet" href="assistant/wave.css">   
+    <link rel="stylesheet" href="paragraph/para.css">
+    <link rel="stylesheet" href="footer/styles.css">
+    <link rel="stylesheet" href="faqs/faqs.css">
+    <link rel="stylesheet" href="early accses/style.css">
+    <link rel="stylesheet" href="video/video.css">
+       <!-- icons -->
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- chat -->
+    <a href="other webpages/query.html" target="_blank"><div class="chat" ><i class="fa-solid fa-comment comment"></i></div></a>    
+    <!--  Header -->
+    <div class="header" id="header">
+    <!-- menu-->    
+    <button class="menu-button" id="menuButton">☰</button>
+        <img src="header/img/logo.png" alt="Sonix Logo" class="logo1">
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#download">Download</a>
+            <div class="tools-button">
+                Tools
+                <div class="tools-dropdown">
+                    <a href="#emotion-recognise">Emotion Recognise</a>
+                    <a href="#song-suggestion">Song Suggestion</a>
+                    <a href="#ai-song-suggestion">AI Song Suggestion</a>
+                    <a href="#trending-songs">Trending Songs</a>
+                    <a href="#trending-songs">Buy Sonix Assistant</a>
+                </div>
+            </div>
+        </div>
+            <div class="nav-buttons">
+                <button id="login">Log In</button>
+                <button id="premium">Get Started</button>
+            </div>
+     
+    </div>
+
+    <!-- hamburger Side menu-->
+    <div class="hamburger-Side-menu" id="sideMenu">
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#download">Download</a>
+            <div class="tools-button">
+                Tools
+                <div class="tools-dropdown">
+                    <a href="#emotion-recognise">Emotion Recognise</a>
+                    <a href="#song-suggestion">Song Suggestion</a>
+                    <a href="#ai-song-suggestion">AI Song Suggestion</a>
+                    <a href="#trending-songs">Trending Songs</a>
+                    <a href="#trending-songs">Buy Sonix Assistant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- popup-->
+
+    <div class="popup-background" id="loginPopup">
+        <div class="login">
+            <span class="close" id="closeLoginPopup">&times;</span>
+            <h2>Log In</h2>
+            <input type="email" placeholder="Email" /><i class="bi bi-envelope-at-fill" id="email"></i> 
+            <input type="password" id="password" placeholder="password" /> <i class="bi bi-eye-slash" id="eye"></i>
+            <h6><a>forgot password</a></h6>
+            <button id="loginbtn">Log In <i class="bi bi-box-arrow-in-left"></i></button> 
+            <button id="Google"><img src="header/img/google.jpg"> Log in with Google</button>
+            <p>If you don't have any account</p>
+            <p id="sign">Sign up <i class="bi bi-person-add"></i></p> 
+        </div>
+    </div>
+
+    <div class="popup-background" id="premiumPopup">
+        <div class="popup-content">
+            <span class="close" id="closePremiumPopup">&times;</span>
+        <h2>Select Your Plan</h2>
+            <div class="plan-options">
+                <div class="plan">
+                    <h3>Free Tier <br> <span>FREE <i class="bi bi-flag-fill"></i></span></h3>
+                    <p>Limited to 15 time per month</p>
+                    <p>Basic access</p>
+                    <p>Include ads </p>
+                    <p>Basic Playlist </p>
+                    <button id="closebtn">Try for Free</button>
+                </div>
+                <div class="plan">
+                    <h3>Premium <BR> <span>₹399 <i class='fas fa-crown' id="gold"></i></span></h3>
+                    <p>Unlimited access</p>
+                    <p>All features included</p>
+                    <p>No Ads</p>
+                    <p>Personalized Playlists</p>
+                    <button>Feel Premium</button>
+                </div>
+                <div class="plan">
+                    <h3>Family Pack <br> <span>₹699 <i class='fas fa-users' id="family"></i></span></h3>
+                    <p>3 accounts per plan</p>
+                    <p>Shared premium features</p>
+                    <p>No Ads</p>
+                    <p>Collaborative Playlists</p>
+                    <button>Enjoy with Family </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Video element for v1 and v2 -->
+<div class="banner">
+    <video src="banner/video.mp4" autoplay loop muted></video>
+    <div class="content">
+        <h1>Unlock the Perfect Playlist <br> with Sonix AI</h1>
+        <h5>Let Sonix AI Read Your Emotions </h5>
+    </div>
+       <a href="https://youtube.com/shorts/SXHMnicI6Pg?si=Vzu-fdKP7Ms941cZ">
+        <button>
+            Explore <i class="bi bi-stars"></i>
+        </button>
+        </a>
+    </div>
+<div class="container">
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="square"></div>
+    <div class="rectangle"></div>
+    
+    <div class="text">
+        Tune in to how you<br>
+        Feel:<span id="responsive-para"></span>
+    </div>    
+    <div class="platform" id="download">
+        <span>NOW Sonix.exe Available in</span>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="container/img/window.png" alt="Windows">
+                <p>Download on <br>Windows</p>
+            </div>
+            <div class="image-item">
+                <img src="container/img/apple.png" alt="Mac">
+                <p>Download on <br>Mac</p>
+            </div>
+        </div>    
+    </div>
+        <div class="image-container2">
+            <span>Now Make Your Moody Playlists on</span>
+            <div class="mimage">
+                <a href="https://www.spotify.com"><img src="container/img/spotify1.png" alt="Windows"></a>
+            </div>
+            <div class="mimage">
+                <a href="https://music.apple.com/"><img src="container/img/applemusic.png" alt="music2"></a>
+            </div>
+            <div class="mimage">
+                <a href="https://music.youtube.com/"><img src="container/img/ytmusic.png" alt="Mac"></a>
+            </div>
+        </div>
+</div>
+<div id="bgcontainer2" class="container2">
+    <div class="fade-element">
+        <div class="section2">
+            <div class="para">
+                Sonix.ai is a face emotion detect AI technology that transforms facial recognition and analysis. By examining facial features and expressions in images and videos, it accurately identifies individuals and tracks their emotions. This advanced AI not only recognizes faces but also detects subtle expression changes, offering valuable insights for security, personalization, and interaction. Sonix.ai sets a new standard in AI-driven facial recognition with its unparalleled precision and intelligence.
+            </div>
+            <img src="banner/face.gif" alt="Face Detection Image">
+        </div>
+        <div class="section2">
+            <div class="para">
+                AI understands your emotions by analyzing facial expressions, voice tones, and textual data. Based on this, it can suggest movies that match your mood or create sound waves that resonate with your emotional state. By analyzing and understanding your emotions, AI can suggest actions or media that can help uplift your mood, converting a sad emotion into a happier one using positive reinforcements.
+            </div>
+            <div class="wave2"> 
+                <div class="wave-animation2">
+                    <div class="wave-bar2"></div>
+                    <div class="wave-bar2"></div>
+                    <div class="wave-bar2"></div>
+                    <div class="wave-bar2"></div>
+                    <div class="wave-bar2"></div>
+                    <div class="wave-bar2"></div>
+                    <div class="wave-bar2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- playstore -->
+  
+<div class="playstore" id="reveal-playstore">
+    <div class="image">
+        <img src="early accses/googleplay.jpg" alt="Image Description" style="width: 100%;">
+    </div>
+    <div class="phrase">
+        <h2>Be the First!</h2>
+        <h5>Be Among the First to Try: Experience Our Advanced Emotion Detection AI on Your Smartphone! Early Access to Our Revolutionary Android App is Here!</h6>
+        <button>Join For Early Access</button>
+    </div>
+</div>
+
+
+
+<div class="videomotion"> 
+    <div class="video-container" id="videoContainer">
+        <video id="video" muted poster="video/cover.jpg"> <!-- Place poster attribute here -->
+            <source src="video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="playPauseBtn" class="center-btn"></button>
+        <button id="soundBtn" class="sound-btn"></button>
+    </div>
+    <p class="p-text">Discover Sonix - your personal music assistant that suggests songs and creates playlists According to your mood. Let Sonix set the perfect vibe for every moment!</p>
+</div>
+
+<!-- product-->
+<div class="bgcontainer" id="bgcontainer">
+    <div class="product-container">
+        <img id="pimg" src="assistant/img/assistant1.png" alt="Product Image">
+        <div class="product-details">
+            <div>
+                <div class="product-name">Sonix Assistant</div>
+                <div class="price">
+                    Rs 3999.00 <span class="strike">6999.00</span>
+                </div>
+                <div class="discount">42% OFF</div>
+            </div>
+            <div class="small-images">
+                <img src="assistant/img/assistant1.png" alt="Small Image 1" onclick="changeImage(this)">
+                <img src="assistant/img/assistant2.jpg" alt="Small Image 2" onclick="changeImage(this)">
+                <img src="assistant/img/assistant3.png" alt="Small Image 3" onclick="changeImage(this)">
+                <img src="assistant/img/assistant4.png" alt="Small Image 4" onclick="changeImage(this)">
+                <img src="assistant/img/assistant5.png" alt="Small Image 5" onclick="changeImage(this)">
+            </div>
+            <ul class="key-points">
+                <li>Mood-based songs for you</li>
+                <li>Voice-controlled tasks</li>
+                <li>Talks you to lift your mood</li>
+                <li>Creates Personalized playlists for you</li>
+            </ul>
+            <div class="buttons">
+                <button>SHOP NOW <i class="bi bi-bag-plus-fill"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>FAQs</h1>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How much does it cost to use Sonix AI other features</span>
+                <span class="toggle-icon">ᐯ</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sonix offers three different pricing plans:</p>
+
+<ul>
+    <li><strong>Free Tier:</strong> Limited to 15 times per month, basic access, includes ads, and basic playlist available.</li><br><br>
+    <li><strong>Premium Tier (₹399/month):</strong> Unlimited access, all features included, no ads, personalized playlists.</li><br><br>
+    <li><strong>Family Pack (₹699/month):</strong> 3 accounts per plan, shared premium features, no ads, collaborative playlists.</li>
+</ul>
+
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How does Sonix AI detect emotions and suggest songs?</span>
+                <span class="toggle-icon">ᐯ</span>
+            </div>
+            <div class="faq-answer">
+                <p><strong>Face Detection in Software:</strong></p>
+<p>Face detection technology identifies human faces within images or video frames. It works by:</p>
+<ul>
+    <li><strong>Feature Extraction:</strong> Scanning an image or video frame for patterns resembling a face, such as eyes, nose, and mouth.</li>
+    <li><strong>Pattern Matching:</strong> Comparing identified facial features to a database of known facial patterns to confirm the presence of a face.</li>
+</ul>
+
+<p><strong>Voice Detection through Sonix:</strong></p>
+<p>Sonix uses advanced voice detection technology to analyze and interpret spoken words. This process involves:</p>
+<ul>
+    <li><strong>Audio Capture:</strong> Recording voice input using a microphone.</li>
+    <li><strong>Speech Recognition:</strong> Converting spoken words into text using algorithms that recognize and process human language.</li>
+
+</ul>
+
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Do you offer customer support?</span>
+                <span class="toggle-icon">ᐯ</span>
+            </div>
+            <div class="faq-answer">
+                <p><strong>Yes, we offer comprehensive customer support services to ensure that you receive the help you need whenever you need it.</strong></p>
+
+<p>Our dedicated support team is available <strong>24/7</strong> to assist you through multiple channels:</p>
+<ul>
+    <li><strong>Email Support:</strong> You can reach out to us anytime via email, and our team will respond promptly to address your queries or concerns.</li>
+    <li><strong>Live Chat Support:</strong> For immediate assistance, our live chat service is available around the clock. Whether you need technical help or have a general inquiry, our agents are ready to assist you in real time.</li>
+    <li><strong>Phone Support:</strong> We also provide phone support from <strong>10:00 AM to 7:00 PM</strong>, Monday through Saturday. Please note that this service is not available on Sundays and public holidays. Our knowledgeable staff will be happy to guide you through any issues during these hours.</li>
+</ul>
+
+<p>We are committed to delivering exceptional customer service, ensuring that you have access to the support you need, no matter the time or day.</p>
+
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Does AI Store My Face Data?</span>
+                <span class="toggle-icon">ᐯ</span>
+            </div>
+            <div class="faq-answer">
+                <p><strong>Yes</strong>, AI systems often store your face data for various reasons:</p>
+<ul>
+    <li><strong>Improving Accuracy:</strong> Storing face data allows AI to improve its accuracy in recognizing and identifying faces over time.</li>
+    <li><strong>Personalization:</strong> Your face data may be used to provide personalized experiences, such as unlocking devices or tailoring content specifically for you.</li>
+    <li><strong>Security:</strong> Face data storage is also used to enhance security features, ensuring that only authorized individuals can access certain services or information.</li>
+</ul>
+<p>However, it's important to note that how this data is stored and used depends on the specific AI system and if you want you can read our<a>privacy policies</a> .</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Can I Delete My Data in Sonix AI?</span>
+                <span class="toggle-icon">ᐯ</span>
+            </div>
+            <div class="faq-answer">
+                
+<p><strong>Yes</strong>, you can manage your data in Sonix AI. Here’s how:</p>
+<ul>
+    <li><strong>AI Data Usage:</strong> Sonix AI does not use or store your data beyond what is necessary for providing its services. Your privacy is a priority.</li>
+    <li><strong>Account Deletion:</strong> To completely remove your data, you need to log out of your account. This action ensures that your data is no longer associated with Sonix AI.</li>
+    <li><strong>Paid Version Data Options:</strong> For users of the paid version, there is an option to ensure that your data is not used. You can access this option within your account settings to manage your data preferences.</li>
+</ul>
+
+<p>By following these steps, you can control and manage your data effectively while using Sonix AI.</p>
+            </div>
+        </div>
+   <section>  Please support me on <p id="GitHub"> GitHub <i class="bi bi-github"></i> </p>and <p id="Patreon">Patreon <i class="fa-brands fa-patreon"></i></p></section>
+</div>
+
+
+<footer class="footer">
+    <div class="logo">
+        <img src="footer/logo.png" alt="Company Logo">
+    </div>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h2>Products</h2>
+            <ul>
+                <li>Sonix Assistant</li>
+                <li>Sonix Speaker</li>
+                <li>Sonix AI </li>
+                <li>Sonix Special Adittion</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Company</h2>
+            <ul>
+                <li>Address: Keshpur, 761029 , Odisha</li>
+                <li>Phone: +91 8658701882</li>
+                <li>Email: sudhanshum024@gmail.com</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Social</h2>
+            <ul class="social-icons">
+                <a href="https://instagram.com" target="_blank"><li><i class="fab fa-instagram"></i> Instagram</li></a>
+                <a href="https://facebook.com" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
+                <a href="https://linkedin.com" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
+                <a href="https://youtube.com" target="_blank"><li><i class="bi bi-youtube"></i> YouTube</li></a>
+                <a href="https://twitter.com" target="_blank"><li><i class="fa-brands fa-x-twitter"></i>Twitter</li></a>               
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+        <span><a href="#">See privacy policy, Terms & Conditions </a></span>
+        <p>&copy; 2024 Sonix. All rights reserved.</p>
+</div>
+</body>
+<script src="header/script.js"></script>
+<script src="container/box.js"></script>
+<script src="container/type.js"></script>
+<script src="assistant/script.js"></script>
+<script src="header/loginscript.js"></script>
+<script src="faqs/script.js"></script>
+<script src="paragraph/script.js"></script>
+<script src="early accses/script.js"></script>
+<script src="video/video.js"></script>
+<script src="header/menuscript.js"></script>
+</html>
