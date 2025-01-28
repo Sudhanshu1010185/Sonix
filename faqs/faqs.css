@@ -76,34 +76,4 @@
         #Patreon:hover{
             color: rgb(150, 150, 150);
         }
-        @media screen and (max-width: 500px) {
-            .faq-container {
-                width: 80vw;
-            }
-        
-            .faq-item {
-                width: 100%; /* Make items take full width */
-                padding: 15px;
-                margin: 15px 0;
-                font-size: 0.9em; /* Smaller font */
-            }
-        
-            .faq-question {
-                font-size: 1em; /* Adjust question font size */
-            }
-        
-            .faq-answer p {
-                font-size: 16px; /* Adjust answer font size */
-            }
-        
-            .faq-container section {
-                flex-direction: column; /* Stack content vertically */
-                margin-top: 10%;
-                text-align: center;
-            }
-        
-            .faq-container section p {
-                font-size: 0.8em; /* Smaller links */
-            }
-        
-        } 
+    
