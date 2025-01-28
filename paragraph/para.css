@@ -92,3 +92,24 @@
         display: none;
     }
 }
+@media (max-width: 350px) {
+    .container2 {
+        padding: 0px;
+        padding-bottom: 0px;
+    }
+    .section2 {
+        position: relative;
+        margin-bottom: 30px;
+        font-size: 15px;
+        line-height: 1.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5%;
+        margin-right: 05%;
+    }
+    .para {
+        padding-right: 02px;
+        margin-right: 02px;
+    }
+}

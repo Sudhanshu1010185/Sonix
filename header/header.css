@@ -157,7 +157,8 @@
         display: flex;
         animation: slideDown 0.5s ease;
     }
-    
+
+ 
     @keyframes slideDown {
         from {
             opacity: 0;
@@ -295,6 +296,26 @@
                 transform: translateY(0);
             }
         }
-
-
-
+        @media screen and (max-width: 450px) {
+            .logo1 {
+                width: 90px;
+                height: auto;
+            }
+        .nav-buttons #login {
+            margin: 5px ;
+            padding: 5px 10px;
+        }
+        .nav-buttons #premium {
+            margin: 5px ;
+            padding: 5px 5px;
+        }
+        .header {
+            padding: 10px;
+        }
+        .nav-buttons {     
+            display: flex;
+            align-items: right;
+            margin-right: 10px;
+            font-size: 12px;
+    }      
+} 

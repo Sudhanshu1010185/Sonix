@@ -11,7 +11,6 @@
         }
 
         .text {
- 
             font-size: 100px;
             font-weight: 600;
             background: linear-gradient(to right, #c8e5fe,#8cc0ff, #647eff, #647eff);
@@ -183,3 +182,73 @@
     }
 }
 
+@media (max-width: 420px) {
+    .container {
+        position: relative;
+        margin: 05px;
+        border-radius: 15px;
+        border: #62a1f478 1px solid;
+        padding: 05px;
+    }
+    .text {
+        font-size: 50px;
+        font-weight: 600;
+        padding: 5px;
+        margin-left: 08px;
+    }
+
+    #responsive-para {
+
+        font-size: 50px;
+        font-weight: 600;
+        margin-left: 5px; /* Space between "Feel" and the typing effect */
+    }
+
+
+    .circle {
+        border-radius: 50%;
+        top: 10%; 
+        left: 10%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle2 {
+        border-radius: 50%;
+        top: 40%; 
+        left: 30%;
+        width: 90px;
+        height: 90px;
+    }
+
+    .rectangle {
+        top: 20%;
+        left: 60%;
+        width: 120px;
+        height: 90px;
+    }
+
+    .square {
+        top: 40%; 
+        left: 70%; 
+        width: 260px;
+        height: 200px;
+    }
+
+    .platform {
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* Stack text and images vertically */
+    align-items: center; /* Center text and images horizontally */
+    font-size: 12px;
+    color: aliceblue;
+    margin-top: 35px;
+}
+.image-item p {
+    margin-top: 5px; /* Remove default margin */
+    font-size: 15px;
+}
+.image-container2 span {
+    font-size: 4vw; /* Reduce font size for larger screens */
+}
+}
