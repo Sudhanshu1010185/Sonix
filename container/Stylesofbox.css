@@ -240,7 +240,7 @@
     display: flex;
     flex-direction: column; /* Stack text and images vertically */
     align-items: center; /* Center text and images horizontally */
-    font-size: 12px;
+    font-size: 15px;
     color: aliceblue;
     margin-top: 35px;
 }
@@ -250,5 +250,12 @@
 }
 .image-container2 span {
     font-size: 4vw; /* Reduce font size for larger screens */
+    margin: 5px;
+    padding: 3px;
+}
+.mimage img {
+    width: 18vw; /* Image width based on viewport width */
+    height: auto;
+    transition: transform 0.1s ease;
 }
 }

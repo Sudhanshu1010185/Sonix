@@ -120,7 +120,7 @@
     animation: fadeInRight 3s ease-out;
 }
 
-@media (max-width:800px) {
+@media (max-width:800px) and (max-width:400px)   {
     .videomotion {
         display:flex;
         align-items: center;
@@ -130,5 +130,28 @@
         
     .videomotion p{
         max-width: 75%;
+    }
+}
+
+@media (max-width:399px) {
+    .videomotion {
+        display:flex;
+        align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 05px;
+    max-width: 100%;
+    }
+    .video-container {
+        position: relative;
+        width: auto;
+        padding: 3px;
+        margin: 03%;
+    }    
+    .videomotion p {
+        font-size: 18px;
+        line-height: 1.3;
+        max-width: 100%;
     }
 }

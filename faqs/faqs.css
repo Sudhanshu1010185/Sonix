@@ -1,16 +1,15 @@
  .faq-container {
-            width: 80vw;
-            justify-content: center;
-            position: relative;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            margin: 0 auto;
 
         }
 
         .faq-item {
-            width: 100%;
             background-color: #aeaeae2b;
-            margin: 20px 20px;
+            width: 80%;
+
+            margin: 15px auto;
             padding: 20px;
             position: relative;
             cursor: pointer;
@@ -76,4 +75,26 @@
         #Patreon:hover{
             color: rgb(150, 150, 150);
         }
-    
+        @media screen and (max-width: 500px) {
+            .faq-item {
+                width: 80%;
+
+                margin: 15px auto;
+            }
+        
+            .faq-question {
+                font-size: 1em;
+            }
+        
+            .faq-answer p {
+                font-size: 16px;
+            }
+            .faq-container section{
+                font-size: 4vw;
+            }
+            .faq-container section p{
+                margin: 0px 5px;
+                cursor: pointer;
+                font-size: 4vw;
+            }
+        }

@@ -92,10 +92,12 @@
                 width: 60%; /* Adjust width as needed */
                 margin-top: 5%;
                 transform: translateX(0%);
+                font-size: small;
+                line-height: 1.4;
             }
             .phrase button {
-                padding: 8px 0px;
-                font-size:0.8em;
+                padding: 6px 4px;
+                font-size:0.6em;
                 cursor: pointer;
                 border-radius: 5px;
                 margin-top: 5px;
