@@ -97,13 +97,13 @@
             }
             .phrase button {
                 padding: 6px 4px;
-                font-size:0.6em;
+                font-size:0.8em;
                 cursor: pointer;
                 border-radius: 5px;
                 margin-top: 5px;
             }       
             .phrase h2 {
                 margin: 0;
-                font-size: 20px;
+                font-size: 24px;
             }
 }
