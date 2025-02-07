@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99999;
+    z-index: 9;
     justify-content: center;
     align-items: center;
 }
@@ -275,3 +275,62 @@ transform: scale(1.1);
     color: #fff;
 }
 
+@media (max-width: 420px) {
+    .popup-content {
+        margin-top: 30%;
+        padding: 10px;
+        width: 60%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+    .plan-options {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 03px;
+    }
+    
+    .plan {
+        background-color: #f4f4f4;
+        box-shadow: #656565 0px 0px 5px;
+        padding: 0px;
+        border-radius: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column; /* Makes sure content is stacked vertically */
+    }
+    .plan h2 {
+        margin: 0;
+    }
+    .plan h3 {
+        margin-bottom: 0px;
+    }
+    .plan h3 span { color: #656565; font-size: medium;}
+    #gold{
+        color: #f1b430;
+    }
+    #family{
+        color: #007bff;
+    }
+    .plan p {
+        margin: 0px;
+    }
+    
+    .plan button {
+        margin-top: auto; /* Pushes the button to the bottom */
+        padding: 10px 15px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        font-weight: 600;
+        border: none;
+        margin: 5%;
+        border-radius: 5px;
+        text-align: center; /* Centers the button horizontally */
+    }
+    
+    .plan button:hover {
+        background-color: #0056b3;
+    }
+    
+}
